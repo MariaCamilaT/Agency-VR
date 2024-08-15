@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/*
+ * http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font: inherit;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea {
+  outline: none;
+}
+
+/* my reset */
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Roboto", arial, sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+#root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+*, input, select, textarea {
+  box-sizing: border-box;
+}
+
+textarea,
+input[type=text],
+input[type=date],
+input[type=button],
+input[type=submit] {
+  padding: 0 5px;
+  font-family: "Roboto", arial, sans-serif;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type=checkbox]:focus {
+  outline: 0;
+}
+
+input:disabled,
+select:disabled {
+  background-color: #ccc;
+}
+
+body {
+  overflow: auto;
+}
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+*/
+.nav {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  position: relative;
+}
+.nav div:nth-child(1) {
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+.nav div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+.nav div:nth-child(2) {
+  width: auto;
+  height: auto;
+}
+.nav div:nth-child(2) ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nav div:nth-child(2) ul li {
+  width: 180px;
+  height: 70px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.nav div:nth-child(2) ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #070537;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  /* Estilo al pasar el cursor */
+}
+.nav div:nth-child(2) ul li a::after {
+  content: "";
+  left: 0;
+  width: 0;
+  height: 2px; /* Ajusta el grosor de la línea */
+  bottom: -5px; /* Ajusta la distancia de la línea desde la parte inferior */
+  position: absolute;
+  background-color: #5864FF; /* Cambia el color de la línea si es necesario */
+  transition: width 0.3s ease; /* Añade una transición suave */
+}
+.nav div:nth-child(2) ul li a:hover::after {
+  width: 100%;
+}
+
+.contactanos {
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contactanos article:nth-child(1) div h1 {
+  font-size: 80px;
+  letter-spacing: 5px;
+  color: #070537;
+  font-family: "Anton", sans-serif;
+}
+.contactanos article:nth-child(2) {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  flex-direction: column;
+}
+.contactanos article:nth-child(2) > div {
+  height: auto;
+  width: 50%;
+}
+.contactanos article:nth-child(2) > div form {
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.contactanos article:nth-child(2) > div form input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 15px;
+  margin-right: 50px;
+  border-bottom: 2px solid #000;
+}
+.contactanos article:nth-child(2) > div form label {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.contactanos article:nth-child(2) > div form input:focus {
+  outline: none;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  margin-right: 50px;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(1) div {
+  display: flex;
+  flex-direction: column;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(2) {
+  width: 100%;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(2) div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(3) button {
+  width: 250px;
+  border: none;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #FF88DB;
+}
+.contactanos article:nth-child(2) > div form div:nth-child(3) button a {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #070537;
+}
+.footer div {
+  width: 100%;
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+}
+.footer div h1, .footer div p, .footer div h2 {
+  font-size: 17px;
+  color: white;
+  margin-top: 10px;
+  font-family: "Open Sans", sans;
+}
+
+/*# sourceMappingURL=style_contact.css.map */

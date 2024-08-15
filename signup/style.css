@@ -1,0 +1,244 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	font: inherit;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+textarea {
+	outline: none;
+}
+
+/* my reset */
+html, body, #root {
+	width: 100vw;
+    height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	font-family: 'Roboto', arial, sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+#root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+*, input, select, textarea {
+	box-sizing: border-box;
+}
+
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="button"],
+input[type="submit"] {
+	padding: 0 5px;
+	font-family: 'Roboto', arial, sans-serif;
+	border-radius: 0;
+
+}
+
+input[type="checkbox"]:focus{
+	outline: 0;
+}
+
+input:disabled,
+select:disabled {
+	background-color: #ccc;
+}
+
+body {
+	overflow: auto;
+}
+
+
+.container_first {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F6FB;
+}
+
+.container {
+    width: 65%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; 
+    border-radius: 30px;
+    background: white;
+}
+
+#article_child_one {
+    width: 50%;
+    position: relative;
+}
+
+.container_tittle {
+    gap: 20px;
+    display: grid;
+    padding: 100px 40px 0px 40px;
+}
+
+.container_tittle > h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #01003D;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-family: "Anton", sans-serif;
+}
+
+.container_tittle > h2 {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.container_tittle > p {
+    font-size: 12px;
+}
+
+.container_image {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+}
+
+.container_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#article_child_two {
+    width: 50%;
+    display: flex;
+    padding-right:50px ;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article_child_two > div {
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    overflow: auto; 
+    background: white;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: calc(100% - 100px); 
+}
+
+.input {
+    height: 45px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    background: #F9FAFF;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); 
+}
+
+#change {
+    border-radius: 5px;
+}
+#change_two {
+    border-radius:  5px;
+}
+#change_three {
+   border-radius: 5px;
+}
+
+
+.input:focus {
+    padding-left: 15px;
+    outline: none;
+}
+
+.button_create {
+    width: 100%;
+    height: 45px;
+    border: none;
+    color: white;
+    cursor: pointer; 
+    border-radius: 5px;
+    letter-spacing: 2px;
+    background-color:#5864FF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container_name_last {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container_name_last > div {
+    width: 100%;
+    margin-right: 10px; 
+    width: calc(50% - 10px); 
+}
+
+.label { 
+    width: 100%;
+    color: gray;
+    font-weight: 500;
+    margin-bottom: 10px; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container_register > h1 {
+    font-size: 60px;
+    color: #01003D;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+    letter-spacing: 3px;
+    margin: 10px 40px 30px 40px;
+    font-family: "Anton", sans-serif;
+}

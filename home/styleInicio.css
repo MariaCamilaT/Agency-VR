@@ -1,0 +1,447 @@
+@charset "UTF-8";
+/*
+ * http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font: inherit;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea {
+  outline: none;
+}
+
+/* my reset */
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Roboto", arial, sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+#root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+*, input, select, textarea {
+  box-sizing: border-box;
+}
+
+textarea,
+input[type=text],
+input[type=date],
+input[type=button],
+input[type=submit] {
+  padding: 0 5px;
+  font-family: "Roboto", arial, sans-serif;
+  border-radius: 0;
+}
+
+input[type=checkbox]:focus {
+  outline: 0;
+}
+
+input:disabled,
+select:disabled {
+  background-color: #ccc;
+}
+
+body {
+  overflow: auto;
+}
+
+.nav {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  position: relative;
+}
+.nav div:nth-child(1) {
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+.nav div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+.nav div:nth-child(2) {
+  width: auto;
+  height: auto;
+}
+.nav div:nth-child(2) ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nav div:nth-child(2) ul li {
+  width: 150px;
+  height: 70px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.nav div:nth-child(2) ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #070537;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  /* Estilo al pasar el cursor */
+}
+.nav div:nth-child(2) ul li a::after {
+  content: "";
+  left: 0;
+  width: 0;
+  height: 2px; /* Ajusta el grosor de la línea */
+  bottom: -5px; /* Ajusta la distancia de la línea desde la parte inferior */
+  position: absolute;
+  background-color: #5864FF; /* Cambia el color de la línea si es necesario */
+  transition: width 0.3s ease; /* Añade una transición suave */
+}
+.nav div:nth-child(2) ul li a:hover::after {
+  width: 100%;
+}
+
+.section_first {
+  width: 100%;
+  height: 100vh;
+}
+.section_first div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section_first div article:nth-child(1) {
+  width: 40%;
+  padding-left: 100px;
+}
+.section_first div article:nth-child(1) div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.section_first div article:nth-child(1) div img {
+  width: 600px;
+  height: 600px;
+}
+.section_first div article:nth-child(2) {
+  width: 50%;
+  display: flex;
+}
+.section_first div article:nth-child(2) div {
+  gap: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.section_first div article:nth-child(2) div h2 {
+  font-size: 100px;
+  letter-spacing: 5px;
+  color: #070537;
+  font-family: "Anton", sans-serif;
+}
+.section_first div article:nth-child(2) div h3 {
+  color: #070537;
+  font-size: 27px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.section_first div article:nth-child(2) div h1 {
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+}
+.section_first div article:nth-child(2) div p {
+  font-size: 18px;
+  text-align: center;
+  max-width: 500px;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+}
+
+.section_services {
+  width: 100%;
+  height: 100vh;
+}
+.section_services article {
+  gap: 100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 100px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.section_services article .child_one {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.section_services article .child_one > div > h3 {
+  font-size: 60px;
+  color: #070537;
+  letter-spacing: 5px;
+  font-family: "Anton", sans-serif;
+}
+.section_services article .child_two {
+  gap: 60px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.section_services article .child_two div div:nth-child(2) h1 {
+  font-size: 23px;
+  font-weight: 800;
+  color: #070537;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.section_services article .child_two div div:nth-child(2) h2 {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+.section_services article .child_three button {
+  width: 250px;
+  border: none;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #FF88DB;
+}
+.section_services article .child_three button a {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.section_image {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section_image article:nth-child(1) {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  line-height: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #070537;
+  padding: 20px 50px 50px 50px;
+}
+.section_image article:nth-child(1) > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.section_image article:nth-child(1) > div div:nth-child(1) {
+  padding: 50px;
+}
+.section_image article:nth-child(1) > div div:nth-child(1) h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Anton", sans-serif;
+}
+.section_image article:nth-child(1) > div div:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_image article:nth-child(1) > div div:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+}
+.section_image article:nth-child(2) {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  padding: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #070537;
+}
+.section_image article:nth-child(2) div div {
+  text-align: center;
+}
+.section_image article:nth-child(2) div div p {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 500px;
+  line-height: 40px;
+  font-family: "Open Sans", sans-serif;
+}
+.section_image article:nth-child(2) div div h1 {
+  color: white;
+  font-size: 20px;
+  color: #070537;
+  margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+}
+
+.section_vision {
+  width: 100%;
+  height: 100vh;
+}
+.section_vision div {
+  width: 100%;
+  height: 100%;
+}
+.section_vision div article:nth-child(1) div {
+  gap: 50px;
+  padding: 100px 0px 0px 100px;
+  display: flex;
+  flex-direction: column;
+}
+.section_vision div article:nth-child(1) div h1 {
+  font-size: 50px;
+  color: #070537;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-family: "Anton", sans-serif;
+}
+.section_vision div article:nth-child(1) div p {
+  font-size: 25px;
+  max-width: 850px;
+  line-height: 40px;
+  font-family: "Open Sans", sans;
+}
+.section_vision div article:nth-child(2) {
+  width: 100%;
+  padding-top: 100px;
+}
+.section_vision div article:nth-child(2) > div {
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.section_vision div article:nth-child(2) > div div {
+  height: 300px;
+  padding: 40px;
+  max-width: 430px;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+}
+.section_vision div article:nth-child(2) > div div h1 {
+  font-size: 23px;
+  font-weight: 800;
+  color: #070537;
+  margin-bottom: 17px;
+  letter-spacing: 3px;
+  font-family: "Roboto", sans-serif;
+}
+.section_vision div article:nth-child(2) > div div p {
+  line-height: 35px;
+  font-size: 17px;
+  font-family: "Open Sans", sans;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #070537;
+}
+.footer div {
+  width: 100%;
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+}
+.footer div h1, .footer div p, .footer div h2 {
+  font-size: 17px;
+  color: white;
+  margin-top: 10px;
+  font-family: "Open Sans", sans;
+}
+
+/*
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+*/
+
+/*# sourceMappingURL=styleInicio.css.map */
